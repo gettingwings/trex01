@@ -12,7 +12,6 @@ var score=0;
 
 var gameOverImg, restartImg;
 var jumpSound , checkPointSound, dieSound;
-var jumpFlag = true;
 
 
 function preload(){
@@ -48,7 +47,7 @@ function setup() {
   trex.scale = 0.5;
   //trex.debug = true;
   trex.setCollider("rectangle", 0,0, 100, 100);
-  console.log(trex)
+  //console.log(trex)
   
   ground = createSprite(width/2,height-50,400,20);
   ground.addImage("ground",groundImage);
