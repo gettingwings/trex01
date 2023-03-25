@@ -43,7 +43,7 @@ function setup() {
   createCanvas(windowWidth-10, windowHeight-20);
   // width height  of canvas
 
-  trex = createSprite(50,height-30,20,50);
+  trex = createSprite(100,height-30,20,50);
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided" ,trex_collided);
   trex.scale = 0.5;
