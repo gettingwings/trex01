@@ -13,6 +13,8 @@ var score=0;
 var gameOverImg, restartImg;
 var jumpSound , checkPointSound, dieSound;
 
+localStorage['highestScore']=0;
+
 
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
@@ -94,7 +96,7 @@ function draw() {
     }
     
     //jump when the space key is pressed
-    if(( keyDown("space") || touches.length>0   )  &&       trex.y >= height-80 ) {
+    if(( keyDown("space") || touches.length>0 )  &&  trex.y >= height-80 ) {
         trex.velocityY = -12;
           jumpSound.play();
           touches = [];
@@ -133,6 +135,8 @@ function draw() {
      
      obstaclesGroup.setVelocityXEach(0);
      cloudsGroup.setVelocityXEach(0);
+     
+     checkScore();
 
     if(mousePressedOver(restart)){
       reset(); // function call
@@ -208,5 +212,10 @@ function reset(){
   score = 0;
   //frameCount = 0;
   
+}
+
+function checkScore(){
+ if(score>localStorage['highestScore'] )
+   localStorage['highestScore'] = score;
 }
 
