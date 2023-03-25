@@ -87,7 +87,7 @@ function draw() {
     //move the ground
     ground.velocityX = -(4 + score/100);
     //scoring
-    score = score + Math.round(getFrameRate()/50);
+    score = score + Math.round(getFrameRate()/150);
 
     if(score%500 == 0 && score>0){
       checkPointSound.play();
@@ -114,10 +114,10 @@ function draw() {
     spawnObstacles();
     
     if(obstaclesGroup.isTouching(trex)){
-      gameState = END;
-      dieSound.play();
-      //trex.velocityY = -10;
-      //jumpSound.play();
+     // gameState = END;
+      //dieSound.play();
+      trex.velocityY = -10;
+      jumpSound.play();
     }
   }
    else if (gameState === END) {
