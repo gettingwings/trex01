@@ -45,7 +45,7 @@ function setup() {
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided" ,trex_collided);
   trex.scale = 0.5;
-  //trex.debug = true;
+  trex.debug = true;
   trex.setCollider("rectangle", 0,0, 100, 100);
   //console.log(trex)
   
