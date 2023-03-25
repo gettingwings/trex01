@@ -77,7 +77,9 @@ function draw() {
   
   background(180);
   //displaying score
-  text("Score: "+ score, width-100,50);
+  text("Highest Score: "+localStorage['highestScore'], width-100,50);
+  text("Score: "+ score, width-100,80);
+ 
   
   if(gameState === PLAY){
     gameOver.visible = false;
