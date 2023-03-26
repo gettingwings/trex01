@@ -13,7 +13,8 @@ var score=0;
 var gameOverImg, restartImg;
 var jumpSound , checkPointSound, dieSound;
 
-localStorage['highestScore']=0;
+if(!localStorage['highestScore'])
+  localStorage['highestScore']=0;
 
 
 function preload(){
@@ -40,8 +41,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth-10, windowHeight-20);
-  // width height  of canvas
+  createCanvas(windowWidth, windowHeight);
 
   trex = createSprite(100,height-30,20,50);
   trex.addAnimation("running", trex_running);
