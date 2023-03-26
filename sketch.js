@@ -85,7 +85,7 @@ function draw() {
     gameOver.visible = false;
     restart.visible = false;
     //move the ground
-    ground.velocityX = -(4 + score/100);
+    ground.velocityX = -(6 + score/100);
     //scoring
     score = score + Math.round(getFrameRate()/150);
 
@@ -173,8 +173,8 @@ function spawnObstacles(){
     }
    
     //assign scale and lifetime to the obstacle 
-    obstacle.velocityX =  -(4 + score/100);
-    obstacle.scale = 0.5;
+    obstacle.velocityX =  -(6 + score/100);
+    obstacle.scale = 0.4;
     obstacle.lifetime = (width+100)/obstacle.velocityX;
    
    //add each obstacle to the group
